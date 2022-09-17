@@ -6,6 +6,7 @@
  *================================================================*/
 #pragma once
 
+#include <vector>
 #include <boost/lexical_cast.hpp>
 #include <execinfo.h>
 #include <sys/time.h>
