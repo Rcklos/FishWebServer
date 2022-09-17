@@ -22,6 +22,8 @@
 #include <stdint.h>
 #include <csignal>
 
+#include <byteswap.h>
+
 #define FISH_NAMESPACE_START namespace fish {
 #define FISH_NAMESPACE_END }
 

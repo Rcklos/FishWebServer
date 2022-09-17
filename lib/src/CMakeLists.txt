@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.2)
 project(libfish)
 set(LIBFISH_VERSION 0.1)
-
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include_directories(${PROJECT_SOURCE_DIR})
 MESSAGE(source dir: ${PROJECT_SOURCE_DIR})
+aux_source_directory(${PROJECT_SOURCE_DIR} source_files)
 file(GLOB test_files ${PROJECT_SOURCE_DIR}/../test/*.cpp)
 foreach(test_file ${test_files})
-  STRING(REGEX REPLACE ".*test_(.+)\\.*" "\\1" target ${test_file})
-  add_executable(${target} ${test_file})
+  STRING(REGEX REPLACE ".*test_(.+)\\..+$" "\\1" target ${test_file})
+  add_executable(${target} ${test_file} ${source_files})
 endforeach(test_file)
