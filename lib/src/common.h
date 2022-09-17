@@ -40,9 +40,9 @@ void SetLogLevel(int level);
 #define FISH_ERROR 3
 #define FISH_FATAL 4
 #define FISH_LOG_IF_LEVEL(level, msg)                                \
-        if (level >= FISH::GetLogLevel()){                            \
+        if (level >= fish::GetLogLevel()){                            \
              std::cout  << __FILE__ << ":" << __LINE__ << "|";  \
-             FISH::FormatDate(std::cout); std::cout << "|";          \
+             fish::FormatDate(std::cout); std::cout << "|";          \
              std::cout  << #level << "|"                        \
                         << msg << std::endl << std::flush;      \
         }
