@@ -6,7 +6,6 @@
  *================================================================*/
 #pragma once
 
-#include <functional>
 #include <cstddef>
 #include <memory>
 #include "common.h"

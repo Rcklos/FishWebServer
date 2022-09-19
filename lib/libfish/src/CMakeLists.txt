@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.2)
 project(libfish)
 set(LIBFISH_VERSION 0.1)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAAGS} -O3 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined")
 enable_language(C ASM)
 
 include_directories(${PROJECT_SOURCE_DIR})

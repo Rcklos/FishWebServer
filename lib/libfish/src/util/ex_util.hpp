@@ -1,9 +1,3 @@
-/*================================================================*
-        Copyright (C) 2021 All rights reserved, www.hsby.link.
-      	文件名称：ex_util.cpp
-      	创 建 者：hsby
-      	创建日期：2022/2/19
- *================================================================*/
 #pragma once
 
 #include <boost/lexical_cast.hpp>

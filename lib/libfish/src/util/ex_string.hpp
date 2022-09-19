@@ -1,9 +1,3 @@
-/*================================================================*
-        Copyright (C) 2021 All rights reserved, www.hsby.link.
-      	文件名称：string_ex.h
-      	创 建 者：hsby
-      	创建日期：2022/2/19
- *================================================================*/
 #pragma once
 
 #include <sstream>
@@ -50,7 +44,8 @@ void ParseArgList(std::stringstream& ss,
                   VarType var, VarTypes...vars) {
     ss << prefix;
     bool found_name = false;
-    for (; format_idx < format.size(); format_idx++) {
+    unsigned int fidx = (unsigned int)format_idx;
+    for (; fidx < format.size(); fidx++) {
         char ch = format[format_idx];
         if (!found_name && !IsArgListSplit(ch)) {
             found_name = true;
