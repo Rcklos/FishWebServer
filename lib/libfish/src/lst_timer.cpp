@@ -170,9 +170,9 @@ void TimerManager::addTimer(Timer::Ptr val) {
         m_tickled = true;
     }
 
-    if(at_front) {
-        onTimerInsertedAtFront();
-    }
+    // if(at_front) {
+    //     onTimerInsertedAtFront();
+    // }
 }
 
 bool TimerManager::detectClockRollover(uint64_t now_expire) {

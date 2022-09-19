@@ -1,15 +1,17 @@
 #include "coroutine.h"
 
-void OnTestShareStackMem(int co_id) {
+void OnTestShareStackMem(int co_id, int *num) {
     while(true) {
-        char buff[128];
-        FISH_LOGDEBUG("co_id = " << co_id << ", buff ptr = " << (size_t)buff);
+        (*num)++;
+        FISH_LOGDEBUG("now number is " << *num);
+        fish::Coroutine::Yield();
     }
 }
 
 void schedule() {
-    auto co1 = fish::Coroutine::Create(std::bind(OnTestShareStackMem, 1));
-    auto co2 = fish::Coroutine::Create(std::bind(OnTestShareStackMem, 2));
+    int num = 0;
+    auto co1 = fish::Coroutine::Create(std::bind(OnTestShareStackMem, 1, &num));
+    auto co2 = fish::Coroutine::Create(std::bind(OnTestShareStackMem, 2, &num));
     while(true) {
         co1->Resume();
         co2->Resume();

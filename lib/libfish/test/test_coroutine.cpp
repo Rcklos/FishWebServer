@@ -28,7 +28,7 @@ void OnTestShareStackMem(int co_id) {
     while(true) {
         char buff[128];
         FISH_LOGDEBUG("co_id = " << co_id << ", buff ptr = " << (size_t)buff);
-        // fish::Coroutine::Yield();
+        fish::Coroutine::Yield();
     }
 }
 
