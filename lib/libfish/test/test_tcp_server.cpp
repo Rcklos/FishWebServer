@@ -1,3 +1,8 @@
+/***
+ *
+ * 不要用apache bench压测，只是个tcpserver的测试
+ *
+ */
 #include <string>
 #include "tcp_server.h"
 #include <assert.h>
