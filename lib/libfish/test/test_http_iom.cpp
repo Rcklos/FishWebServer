@@ -30,7 +30,8 @@ void OnHandleTask(void* arg) {
         int ret = read(client, &req[0], req.size());
         if (ret > 0) {
             ret = write(client, &rsp[0], rsp.size());
-            continue;
+            // 如果continue, 则ab压测可能会有apr timeout
+            // continue;
         }
         FISH_LOGDEBUG("close, " << EX_STRING_VARS(client));
         close(client);
