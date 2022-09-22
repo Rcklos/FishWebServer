@@ -419,13 +419,13 @@ void ByteArray::WriteStringWithoutLength(const std::string &value) {
     return value
 
 int8_t ByteArray::ReadFint8() {
-    int8_t value;
+    int8_t value = 0;
     Read(&value, sizeof(value));
     return value;
 }
 
 uint8_t ByteArray::ReadFuint8() {
-    uint8_t value;
+    uint8_t value = 0;
     Read(&value, sizeof(value));
     return value;
 }
@@ -497,7 +497,7 @@ float ByteArray::ReadFloat() {
 
 double ByteArray::ReadDouble() {
     uint64_t tmp = ReadUint64();
-    double value;
+    double value = 0;
     memcpy(&value, &tmp, sizeof(tmp));
     return value;
 }
