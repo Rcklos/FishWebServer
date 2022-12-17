@@ -1,5 +1,5 @@
-#include "http/http_connection.h"
-#include "http/http_parser.h"
+#include "http_connection.h"
+#include "http_parser.h"
 
 FISH_NAMESPACE_START
 

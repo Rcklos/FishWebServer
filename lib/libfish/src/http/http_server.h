@@ -1,7 +1,7 @@
 #pragma once
 
-#include "tcp_server.h"
-#include "http/servlet.h"
+#include "../tcp_server.h"
+#include "servlet.h"
 
 FISH_NAMESPACE_START
 namespace http {

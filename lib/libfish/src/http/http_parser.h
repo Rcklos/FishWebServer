@@ -1,9 +1,9 @@
 #pragma once
 
-#include <common.h>
-#include "http/http.h"
-#include "http/http11_parser.rl.h"
-#include "http/httpclient_parser.rl.h"
+#include "../common.h"
+#include "http.h"
+#include "http11_parser.rl.h"
+#include "httpclient_parser.rl.h"
 
 FISH_NAMESPACE_START
 namespace http {

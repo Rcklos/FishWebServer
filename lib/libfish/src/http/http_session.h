@@ -1,8 +1,8 @@
 #pragma once
 
 #include <memory>
-#include "socket_stream.h"
-#include "http/http.h"
+#include "../socket_stream.h"
+#include "http.h"
 
 FISH_NAMESPACE_START
 namespace http {

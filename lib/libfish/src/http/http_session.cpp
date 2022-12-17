@@ -1,6 +1,6 @@
-#include "http/http_session.h"
-#include "http/http_parser.h"
-#include "common.h"
+#include "http_session.h"
+#include "http_parser.h"
+#include "../common.h"
 
 char* g_recv_buffer = new char[64 * 1000 * 1000];
 

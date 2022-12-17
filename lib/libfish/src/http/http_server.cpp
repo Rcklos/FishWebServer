@@ -1,5 +1,5 @@
-#include "http/http_server.h"
-#include "http/http_session.h"
+#include "http_server.h"
+#include "http_session.h"
 
 const std::string rsp = "HTTP/1.1 200 OK\r\nContent-length:8\r\n\r\nabcdefgh\r\n";
 

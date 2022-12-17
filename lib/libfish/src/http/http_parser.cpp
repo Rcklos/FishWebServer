@@ -1,5 +1,5 @@
-#include "http/http_parser.h"
-#include "common.h"
+#include "http_parser.h"
+#include "../common.h"
 
 FISH_NAMESPACE_START
 namespace http {

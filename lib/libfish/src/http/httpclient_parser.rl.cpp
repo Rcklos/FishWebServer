@@ -34,7 +34,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "http/httpclient_parser.rl.h"
+#include "httpclient_parser.rl.h"
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>

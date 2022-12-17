@@ -1,6 +1,6 @@
 #include <fnmatch.h>
-#include "http/servlet.h"
-#include "common.h"
+#include "servlet.h"
+#include "../common.h"
 
 FISH_NAMESPACE_START
 namespace http {
